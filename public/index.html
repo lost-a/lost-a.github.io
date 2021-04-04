@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/main.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="theme-color" content="#000000" /> -->
+
+    <meta name="theme-color" content=”#ffffff”>
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <audio id="audio" src="https://www.soundjay.com/misc/sounds/small-bell-ring-01a.mp3" autoplay="false" ></audio>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jqtimespace@1.3.1/css/_timespace.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jqtimespace@1.3.1/css/_timespace.light.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jqtimespace@1.3.1/css/jquery.timespace.light.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jqtimespace@1.3.1/jquery.timespace.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>FiltPoker</title>
+    <style>
+      .filter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+
+.cards{
+    width: 70px;
+    height: 180px;
+    position: fixed;
+   
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -120%);
+    overflow: hidden;
+
+  }
+
+.club {
+    position: fixed ;
+    right:8px;
+    top: -36px;
+    animation-name: example;
+    animation-duration: 2500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1000;
+ 
+ }
+
+
+ .diamond {
+    position: fixed ;
+    right:38px;
+    top: -36px;
+    animation-name: example;
+    animation-duration: 2500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1000;
+    animation-delay: 600ms;
+ }
+
+ .spade {
+    position: fixed ;
+    right:12px;
+    top: -36px;
+    animation-name: example;
+    animation-duration: 2500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1000;
+    animation-delay: 1200ms;
+ }
+
+
+ .heart {
+    position: fixed ;
+    right:32px;
+    top: -36px;
+    animation-name: example;
+    animation-duration: 2500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1000;
+    animation-delay: 1800ms;
+ }
+
+
+
+  @keyframes example {
+    0%   {transform: translateY(0%); opacity: 0;}
+    20%   {transform: translateY(200%); opacity: 0;} 
+    30%   {transform: translateY(300%); opacity: 1.0;}
+    99%   {transform: translateY(990%); opacity: 1.0;}
+    100%   {transform: translateY(1000%); opacity: 0;}
+  }  
+
+
+
+  .payment {
+    width: 40px;
+    height: 180px;
+    position: fixed;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -0%);
+    overflow: hidden;
+  }
+
+
+  .coin1 {
+    position: fixed;
+    right: 10px;
+    top: -36px;
+    animation-name: example2;
+    animation-duration: 1200ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 2000;
+
+
+}
+.coin2 {
+    position: fixed;
+    right: 6px;
+    top: -36px;
+    animation-name: example2;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 2000;
+    animation-delay: 500ms;
+}
+
+.coin3 {
+    position: fixed;
+    right: 3px;
+    top: -36px;
+    animation-name: example2;
+    animation-duration: 900ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 2000;
+    animation-delay: 900ms;
+}
+
+
+
+
+
+
+ @keyframes example2 {
+    0%   {transform: translateY(0%); opacity: 0;}
+    20%   {transform: translateY(200%); opacity: 0;} 
+    30%   {transform: translateY(300%); opacity: 1.0;}
+    50%   {transform: translateY(500%); opacity: 1.0;}
+    61%   {transform: translateY(610%); opacity: 0;}
+    100%   {transform: translateY(620%); opacity: 0;}
+
+
+  }  
+
+
+
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="box">
+        <div class="filter">
+            <img src="test2.png" width="auto" height="120" style="-webkit-filter: drop-shadow(3px 3px 3px #d0d0d09e);"></div>
+        
+        <div class="cards">
+        
+        <div class="club">
+            <img src="club.png" width="auto" height="35"></div>
+        
+        <div class="diamond">
+            <img src="diamond.png" width="auto" height="35">
+        </div>
+        
+        <div class="heart">
+            <img src="heart.png" width="auto" height="35">
+        </div>
+        
+        <div class="spade">
+            <img src="spade.png" width="auto" height="35">
+        </div>
+        </div>
+        
+        <div class="payment">
+        <div class="coin3">
+            <img src="payment3.png" width="auto" height="25">
+        </div>
+        
+        <div class="coin2">
+            <img src="payment2.png" width="auto" height="30">
+        </div>
+        
+        <div class="coin1">
+            <img src="payment1.png" width="auto" height="30">
+        </div>
+        
+        </div>
+        </div>
+        
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+
+</html>
